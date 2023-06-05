@@ -1,0 +1,99 @@
+.sec{
+    width: 75%;
+    margin-left: 7.5%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.sec button,a{
+    width: 100%;
+    margin-top: 20px;
+}
+.mar-top{
+    margin-top: 100px;
+}
+.mar-top2{
+    margin-top: 50px;
+}
+.hide{
+    display: none;
+    transition: 0,5 ease, 0,5 ease;
+  }
+
+#cargaTickets{
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+
+}
+.w80{
+    width: 80%;
+    max-width: 250px;
+}
+#tit{
+
+    width: 100%;
+}
+label{
+    margin-top: 15px;
+    width: 250px;
+}
+
+#save{
+    border: 2px solid blue;
+    background-color: white;
+    color: blue;
+    font-weight: 600;
+}
+#save:hover{
+    border: 2px solid green;
+    color: green;
+
+}
+h4{
+    display: inline;
+}
+#back{
+    padding-top: 30px;
+    padding-left: 30px;
+
+}
+#back li{
+    margin: 10px;
+}
+#back a{
+    font-weight: 600;
+}
+#tit{
+    width: 100%;
+    text-align: center;
+    color: blue;
+    height: 40px;
+}
+#cont{
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    margin-left: 10%;
+
+}
+#cont h2{
+    margin-left: 10%;
+}
+.center{
+    text-align: center;
+}
+table{
+    font-size: 10px;
+}
+
+
+@media (min-width: 768px){
+    #cont{
+        max-width: 1200px;
+    }
+    table{
+        font-size: 15px;
+    }
+}
