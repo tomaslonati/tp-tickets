@@ -1,20 +1,35 @@
+*{
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.body{
+    background-color: black;
+}
 .sec{
     width: 75%;
-    margin-left: 7.5%;
+    margin-left: 12.5%;
     display: block;
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+.sec h1{
+    font-weight: 700;
 }
 .sec button,a{
     width: 100%;
     margin-top: 20px;
 }
 .mar-top{
-    margin-top: 100px;
+    margin-top: 50px;
 }
 .mar-top2{
-    margin-top: 50px;
+    margin-top: 25px;
+}
+.mar-top150{
+    margin-top: 100px;
 }
 .hide{
     display: none;
@@ -38,12 +53,14 @@
 label{
     margin-top: 15px;
     width: 250px;
+    font-weight: 600;
 }
 
 #save{
-    border: 2px solid blue;
-    background-color: white;
-    color: blue;
+    border: 2px solid #0D6EFD;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.134);
+    color: #0D6EFD;
     font-weight: 600;
 }
 #save:hover{
@@ -53,6 +70,19 @@ label{
 }
 h4{
     display: inline;
+}
+#cargaTickets h2{
+    font-size: 24px;
+    font-weight: 600;
+    color:  #0D6EFD;
+    margin-top: 20px;
+    
+}
+#cargaTickets h5{
+    font-size: 14px;
+    font-weight: 100;
+    color: white;
+    margin-bottom: 20px;
 }
 #back{
     padding-top: 30px;
@@ -68,18 +98,30 @@ h4{
 #tit{
     width: 100%;
     text-align: center;
-    color: blue;
+    color:  #0D6EFD;
     height: 40px;
 }
+.tit-celeste{
+    font-size: 16px;
+    color: #0D6EFD;
+    font-weight: 200;
+}
 #cont{
-    width: 80%;
-    max-width: 400px;
     text-align: center;
-    margin-left: 10%;
-
+}
+.celeste{
+    background-color: #0D6EFD;
+    color: #0D6EFD;
 }
 #cont h2{
+    width: 80%;
     margin-left: 10%;
+ 
+}
+.white{
+    background-color: white;
+    color: black;
+    border-radius: 5px;
 }
 .center{
     text-align: center;
@@ -87,8 +129,14 @@ h4{
 table{
     font-size: 10px;
 }
-
-
+.volver{
+    color: #0D6EFD;
+    text-decoration: none;
+    font-size: 14px;
+}
+button{
+    border-radius: 5px;
+}
 @media (min-width: 768px){
     #cont{
         max-width: 1200px;
@@ -96,4 +144,5 @@ table{
     table{
         font-size: 15px;
     }
+ 
 }

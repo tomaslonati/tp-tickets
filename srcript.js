@@ -15,11 +15,15 @@ $(document).ready(function() {
     request.onupgradeneeded = function(event) {
       db = event.target.result;
       var selectedType = getTypeFromUser(); // Obtén el tipo seleccionado por el usuario de alguna manera
-      var objectStore = db.createObjectStore(selectedType, { keyPath: "id", autoIncrement: true });
-      objectStore.createIndex("name", "name", { unique: false });
-      objectStore.createIndex("type", "type", { unique: false });
-      objectStore.createIndex("desc", "desc", { unique: false });
-    };
+      if (selectedType){
+        var objectStore = db.createObjectStore(selectedType, { keyPath: "id", autoIncrement: true });
+        objectStore.createIndex("name", "name", { unique: false });
+        objectStore.createIndex("type", "type", { unique: false });
+        objectStore.createIndex("desc", "desc", { unique: false });
+      };
+
+      }
+     
     
   
     request.onsuccess = function(event) {
@@ -97,34 +101,41 @@ $(document).ready(function() {
     });
     
   });
-  document.querySelector('form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita que el formulario se envíe
-  
-    // Obtiene el valor seleccionado del formulario select
-    var selectedOption = document.querySelector('.form-select').value;
-  
-    // Redirige al usuario al archivo HTML correspondiente
-    if (selectedOption === '0') {
-      window.location.href = 'coordinador.html';
-    } else if (selectedOption === '1') {
-      window.location.href = 'front.html';
-    } else if (selectedOption === '2') {
-      window.location.href = 'back.html';
-    } else if (selectedOption === '3') {
-      window.location.href = 'seguridad.html';
-      
-      
-    }
-  });  
+  if(document.querySelector('form')){
+    document.querySelector('form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Evita que el formulario se envíe
+    
+      // Obtiene el valor seleccionado del formulario select
+      var selectedOption = document.querySelector('.form-select').value;
+    
+      // Redirige al usuario al archivo HTML correspondiente
+      if (selectedOption === '0') {
+        window.location.href = 'coordinador.html';
+      } else if (selectedOption === '1') {
+        window.location.href = 'front.html';
+      } else if (selectedOption === '2') {
+        window.location.href = 'back.html';
+      } else if (selectedOption === '3') {
+        window.location.href = 'seguridad.html';
+        
+        
+      }
+    });   
+    
+  }
+
   const saveBtn = document.getElementById('save');
   const msj = document.getElementById('msj');
   
-  saveBtn.addEventListener('click', function() {
-    msj.classList.remove('hide');
-    setTimeout(function() {
-      window.location.href = 'ingreso.html';
-    }, 1000); 
-  });
+  //Hay que hacer esto con todos los elementos que no esten
+  if (saveBtn){
+    saveBtn.addEventListener('click', function() {
+      msj.classList.remove('hide');
+      setTimeout(function() {
+        window.location.href = 'ingreso.html';
+      }, 1000); 
+    });
+  }
   
 
 
